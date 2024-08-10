@@ -8,6 +8,6 @@ const defaultState: CombinedState = {
 	blog: {},
 };
 // const ContextStates = createContext({});
-const ContextStates = createContext<CombinedState | undefined>({});
+const ContextStates = createContext<CombinedState | undefined>({ blog: {} });
 export const useContextStates = () => useContext(ContextStates);
 export default ContextStates;

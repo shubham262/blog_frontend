@@ -7,7 +7,7 @@ import { GetServerSideProps } from 'next';
 import axios from 'axios';
 import moment from 'moment';
 const { Title, Text } = Typography;
-
+const baseURL = 'https://blog-backend-pgif.onrender.com';
 export default function Home(props: any) {
 	const router = useRouter();
 	const data = useContextStates();
@@ -65,7 +65,7 @@ export default function Home(props: any) {
 
 export const getServerSideProps: GetServerSideProps = async () => {
 	try {
-		const response = await axios.get('http://localhost:8000/posts');
+		const response = await axios.get(baseURL + '/posts');
 		const { data } = response?.data;
 
 		if (data.status === 200) {

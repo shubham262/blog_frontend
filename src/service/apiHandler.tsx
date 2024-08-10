@@ -7,7 +7,7 @@ import axios, {
 import { configUrls } from './config';
 
 const api = axios.create({
-	baseURL: configUrls?.dev,
+	baseURL: configUrls?.live,
 	timeout: 10000,
 	headers: {
 		'Content-Type': 'application/json',
